@@ -10,6 +10,11 @@ export default function App() {
   const [descricao, setDescricao] = useState("")
   const [mostrarDados, setMostrarDados] = useState(false)
 
+  const [nomeEnviado, setNomeEnviado] = useState("")
+  const [cursoEnviado, setCursoEnviado] = useState("")
+  const [disciplinaEnviada, setDisciplinaEnviada] = useState("")
+  const [descricaoEnviada, setDescricaoEnviada] = useState("")
+
   useEffect(() => {
     console.log("Aplicativo iniciado!")
   }, [])
@@ -18,14 +23,12 @@ export default function App() {
     <SafeAreaView style={styles.container}>
       <ScrollView contentContainerStyle={styles.scroll}>
 
-        {/* Avatar com inicial do nome */}
         <View style={styles.avatarContainer}>
           <View style={styles.avatar}>
             <Text style={styles.avatarTexto}>👤</Text>
           </View>
         </View>
 
-        {/* Card do formulário */}
         <View style={styles.card}>
           <Text style={styles.titulo}>Formulário de Cadastro</Text>
 
@@ -74,18 +77,23 @@ export default function App() {
           <Button
             title="Enviar"
             color="#5bbfb5"
-            onPress={() => setMostrarDados(true)}
+            onPress={() => {
+              setNomeEnviado(nome)
+              setCursoEnviado(curso)
+              setDisciplinaEnviada(disciplina)
+              setDescricaoEnviada(descricao)
+              setMostrarDados(true)
+            }}
           />
         </View>
 
-        {/* Exibição dos dados */}
         {mostrarDados && (
           <View style={styles.dadosCard}>
             <Text style={styles.titulo}>Dados Enviados ✅</Text>
-            <Text style={styles.dado}>📝 Nome: {nome}</Text>
-            <Text style={styles.dado}>🎓 Curso: {curso}</Text>
-            <Text style={styles.dado}>📚 Disciplina: {disciplina}</Text>
-            <Text style={styles.dado}>✏️ Descrição: {descricao}</Text>
+            <Text style={styles.dado}>📝 Nome: {nomeEnviado}</Text>
+            <Text style={styles.dado}>🎓 Curso: {cursoEnviado}</Text>
+            <Text style={styles.dado}>📚 Disciplina: {disciplinaEnviada}</Text>
+            <Text style={styles.dado}>✏️ Descrição: {descricaoEnviada}</Text>
           </View>
         )}
 
