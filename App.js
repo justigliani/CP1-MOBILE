@@ -36,6 +36,7 @@ export default function App() {
             <Text style={styles.rotulo}>📝 Nome</Text>
             <TextInput
               placeholder="Digite seu nome"
+              placeholderTextColor="#5bbfb5"
               style={styles.input}
               autoCapitalize="words"
               onChangeText={setNome}
@@ -46,6 +47,7 @@ export default function App() {
             <Text style={styles.rotulo}>🎓 Curso</Text>
             <TextInput
               placeholder="Digite seu curso"
+              placeholderTextColor="#5bbfb5"
               style={styles.input}
               autoCapitalize="words"
               onChangeText={setCurso}
@@ -56,6 +58,7 @@ export default function App() {
             <Text style={styles.rotulo}>📚 Disciplina</Text>
             <TextInput
               placeholder="Digite sua disciplina"
+              placeholderTextColor="#5bbfb5"
               style={styles.input}
               autoCapitalize="words"
               onChangeText={setDisciplina}
@@ -66,6 +69,7 @@ export default function App() {
             <Text style={styles.rotulo}>✏️ Descrição</Text>
             <TextInput
               placeholder="Breve apresentação pessoal"
+              placeholderTextColor="#5bbfb5"
               style={styles.inputDescricao}
               autoCapitalize="sentences"
               multiline={true}
@@ -98,7 +102,7 @@ export default function App() {
         )}
 
       </ScrollView>
-      <StatusBar style="auto" />
+      <StatusBar style="light" />
     </SafeAreaView>
   );
 }
@@ -106,7 +110,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f0fafa',
+    backgroundColor: '#0d0d0d',
   },
   scroll: {
     alignItems: 'center',
@@ -121,7 +125,7 @@ const styles = StyleSheet.create({
     width: 90,
     height: 90,
     borderRadius: 45,
-    backgroundColor: '#ffffff',
+    backgroundColor: '#1a1a1a',
     borderWidth: 3,
     borderColor: '#5bbfb5',
     alignItems: 'center',
@@ -131,14 +135,14 @@ const styles = StyleSheet.create({
     fontSize: 40,
   },
   card: {
-    backgroundColor: '#ffffff',
+    backgroundColor: '#1a1a1a',
     width: '100%',
     borderRadius: 16,
     padding: 20,
     gap: 14,
     shadowColor: '#5bbfb5',
     shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.15,
+    shadowOpacity: 0.2,
     shadowRadius: 8,
     elevation: 4,
   },
@@ -146,7 +150,7 @@ const styles = StyleSheet.create({
     fontSize: 22,
     fontWeight: 'bold',
     textAlign: 'center',
-    color: '#2e9e94',
+    color: '#5bbfb5',
     marginBottom: 4,
   },
   campoContainer: {
@@ -154,20 +158,21 @@ const styles = StyleSheet.create({
   },
   rotulo: {
     fontSize: 15,
-    color: '#444',
+    color: '#5bbfb5',
     fontWeight: '500',
   },
   input: {
-    backgroundColor: '#e8f7f6',
+    backgroundColor: '#2a2a2a',
     width: '100%',
     borderRadius: 10,
     padding: 10,
     fontSize: 15,
     borderWidth: 1,
-    borderColor: '#b2e0dc',
+    borderColor: '#5bbfb5',
+    color: '#ffffff',
   },
   inputDescricao: {
-    backgroundColor: '#e8f7f6',
+    backgroundColor: '#2a2a2a',
     width: '100%',
     borderRadius: 10,
     padding: 10,
@@ -175,22 +180,23 @@ const styles = StyleSheet.create({
     height: 80,
     textAlignVertical: 'top',
     borderWidth: 1,
-    borderColor: '#b2e0dc',
+    borderColor: '#5bbfb5',
+    color: '#ffffff',
   },
   dadosCard: {
-    backgroundColor: '#ffffff',
+    backgroundColor: '#1a1a1a',
     width: '100%',
     borderRadius: 16,
     padding: 20,
     gap: 10,
     shadowColor: '#5bbfb5',
     shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.15,
+    shadowOpacity: 0.2,
     shadowRadius: 8,
     elevation: 4,
   },
   dado: {
     fontSize: 16,
-    color: '#333',
+    color: '#ffffff',
   },
 });
